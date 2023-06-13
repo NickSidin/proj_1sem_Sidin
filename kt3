@@ -1,0 +1,73 @@
+ 
+3.1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../kt_3/work_1/script.js"></script>
+</head>
+<body>
+    <form id="aform">
+        <label for="geometry">Фигура</label>
+        <input type="text" placeholder="Введите название геометрической фигуры" id="geometry"><br>
+        <label for="color">Цвет</label>
+        <input type="text" placeholder="Введите цвет" id="color">
+        <button onclick="ShowText()">Узнать</button>
+    </form>
+</body>
+</html>
+
+function ShowText(){
+    var text_geometry = document.getElementById('geometry').value;
+    var text_color = document.getElementById("color").value;
+    var length = text_geometry.length;
+
+    var message_for_user = "Мне нравится: " + text_geometry + '\n' + "Цвет: " + text_color + '\n' + "Длина фигуры: " + length;
+    alert(message_for_user);
+}
+
+3.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../kt_3/work_2/script.js"></script>
+</head>
+<body>
+    <form id="user">
+        <label for="name">Введите имя</label>
+        <input type="text" id="name" onclick="MessageForUser()"><br><br>
+        <form>
+            <p>Что вам нравитя больше? </p>
+            <input type="radio" value="Мороженое" name="Мороженое" id="rad_m" onclick="Radiochoice_one()">Мороженое<br><br>
+            <input type="radio" value="Шоколад" id="rad_sh" onclick="Radiochoice_two()">Шоколад
+        </form><br><br>
+        <button onclick='ButtonClick()' id="button">Отправить</button>
+    </form>
+</body>
+</html>
+
+function MessageForUser(){
+    alert("Внимательно вводите свое имя")
+}
+
+function Radiochoice_one(){
+    var text = document.getElementById("rad_m").value;
+    alert("Вы выбрали: " + text)
+}
+
+function Radiochoice_two(){
+    var text = document.getElementById("rad_sh").value;
+    alert("Вы выбрали: " + text)
+}
+function ButtonClick(){
+    alert("Спасибо за ваше участие в опросе!")
+}
